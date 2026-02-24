@@ -1,0 +1,25 @@
+<div class="min-h-screen bg-slate-100">
+
+      <app-navbar [user]="user()" />
+
+      <div class="p-8">
+
+        <h2 class="text-2xl font-bold mb-4">
+          Bienvenido {{ user()?.firstName }} 👋
+        </h2>
+
+        <!-- <p class="text-slate-600 mb-6">
+          Institución: {{ user()?.institution ?? 'No definida' }}
+        </p> -->
+
+        <div class="flex gap-3">
+          @for (role of user()?.roles ?? []; track role) {
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">
+              {{ role }}
+            </span>
+          }
+        </div>
+
+      </div>
+
+    </div>
