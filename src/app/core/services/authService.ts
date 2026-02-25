@@ -19,7 +19,7 @@ export class AuthService {
   private _user = signal<UserProfile | null>(null);
   user = this._user.asReadonly();
 
-  private API = 'https://localhost:44363/api/auth';
+  private API = '/api/auth';
 
   login(credentials: { user: string; password: string }) {
     return this.http.post<UserProfile>(`${this.API}/login`, credentials).pipe(
