@@ -1,0 +1,79 @@
+# Docker ignore for keycloak-frontent-test (frontend project)
+
+# Node modules and package manager logs
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist
+build
+out
+.cache
+.next
+.vite
+*.localbuild
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.crt
+*.csr
+secrets/
+credentials/
+
+# Version control and editor metadata
+.git
+.gitignore
+.gitattributes
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swn
+*.tmp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test / coverage
+coverage/
+nyc_output/
+jest-results.json
+
+# Logs and runtime files
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Misc build artifacts and large files
+dist-*
+release/
+tmp/
+temp/
+.cache/
+.cache-loader/
+public/locales/**/debug.json
+
+# OneDrive / sync placeholders (local OS sync metadata)
+~$*
+*.lnk
+
+# Keep Dockerfile and build context small: exclude docs, local notes, and IDE scratch files
+docs/
+*.md.bak
+*.bak

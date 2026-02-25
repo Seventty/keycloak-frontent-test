@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: keycloak-angular-test:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:8081"
+    environment:
+      NODE_ENV: development
+    command: sh -c "npm install --silent && npm start"
